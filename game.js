@@ -60,10 +60,12 @@ class Game {
   play() {
     let flag = (this.playerOne.cardsOfPlayer.length > 0) && (this.playerTwo.cardsOfPlayer.length > 0)
     let box = []
+    let i = 0
 
 
     while (flag) {
-
+      i++
+      console.log("look! " + i + " round will begin!")
       let cardOne = this.playerOne.cardsOfPlayer.pop()
       let cardTwo = this.playerTwo.cardsOfPlayer.pop()
       box.push(cardOne)
@@ -116,5 +118,5 @@ game.washCards()
 //distribute the cards to players
 game.distribute()
 //show who is the winner
-
-console.log(game.play())
+let winner = game.play()
+console.log(winner)
